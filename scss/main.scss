@@ -1,0 +1,26 @@
+// Importar variables y mixins primero
+@import "variables";
+@import "mixins";
+
+// Reset global
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-body;
+  background: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+}
+
+// Importar componentes
+@import "header";
+@import "hero";
+@import "menu";
+@import "about";
+@import "reservas";
+@import "contacto";
+@import "footer";
