@@ -1,27 +1,246 @@
 .about {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 4rem 8%;
-  gap: 2rem;
+  padding: 6rem 8%;
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
   .about-text {
     flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: $color-primary;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
 
     h2 {
       font-family: $font-title;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3rem;
+      margin: 0;
+      line-height: 1.2;
+      background: linear-gradient(45deg, $color-text-dark, #4a4a4a);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: $color-text-gray;
+      margin-bottom: $spacing-base;
+    }
+
+    .mision-vision {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+
+      .mision, .vision {
+        background: #fff;
+        padding: 2rem;
+        border-radius: $border-radius-card;
+        box-shadow: $shadow-card;
+        transition: $transition-default;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: $shadow-hover;
+        }
+
+        .icon {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          display: block;
+          color: $color-primary;
+          
+          i {
+            @include icon-container(50px);
+          }
+
+          &:hover i {
+            transform: rotateY(180deg);
+            background: $color-primary;
+            color: white;
+          }
+        }
+
+        h3 {
+          font-family: $font-title;
+          font-size: 1.6rem;
+          margin-bottom: $spacing-base;
+          color: $color-text-dark;
+        }
+
+        p {
+          color: $color-text-gray;
+          line-height: 1.7;
+          font-size: 1.05rem;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 4px;
+          height: 100%;
+          background: $color-primary;
+          border-radius: 4px 0 0 4px;
+        }
+      }
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: $spacing-base;
+
+      .feature {
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(255,255,255,0.8);
+        border-radius: $border-radius-icon;
+        transition: $transition-default;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+
+        .feature-icon {
+          font-size: 1.5rem;
+          margin-bottom: $spacing-base;
+          display: block;
+          color: $color-primary;
+
+          i {
+            @include icon-container(60px, $border-radius-icon);
+          }
+
+          &:hover i {
+            background: $color-primary;
+            color: white;
+            transform: translateY(-5px);
+          }
+        }
+
+        h4 {
+          font-family: $font-title;
+          font-size: 1.1rem;
+          margin-bottom: $spacing-base * 0.5;
+          color: $color-text-dark;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: $color-text-gray;
+        }
+      }
     }
   }
 
   .about-img {
     flex: 1;
+    min-width: 300px;
+    position: relative;
 
     img {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 20px;
+      box-shadow: $shadow-card;
+      transition: $transition-default;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    .experience-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: $color-primary;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+
+      .years {
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1;
+      }
+
+      .text {
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 4rem 5%;
+
+    .about-text h2 {
+      font-size: 2.5rem;
+    }
+
+    .about-features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 5%;
+
+    .mision-vision {
+      grid-template-columns: 1fr;
+    }
+
+    .about-features {
+      grid-template-columns: 1fr;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+    }
+
+    .experience-badge {
+      width: 100px;
+      height: 100px;
+      bottom: -10px;
+      right: -10px;
+
+      .years {
+        font-size: 2rem;
+      }
+
+      .text {
+        font-size: 0.8rem;
+      }
     }
   }
 }

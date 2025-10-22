@@ -32,7 +32,7 @@ header {
 header .logo {
   font-family: "Playfair Display", serif;
   font-size: 1.8rem;
-  color: #f8d49d;
+  color: #c8a97e;
 }
 header ul {
   display: flex;
@@ -46,7 +46,7 @@ header ul li a {
   transition: color 0.3s;
 }
 header ul li a:hover {
-  color: #f8d49d;
+  color: #c8a97e;
 }
 header .menu-toggle {
   display: none;
@@ -104,12 +104,12 @@ header .menu-toggle {
 }
 .hero .hero-text .btn {
   padding: 0.8rem 1.5rem;
-  background: #f8d49d;
+  background: #c8a97e;
   color: #000;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .hero .hero-text .btn:hover {
@@ -155,27 +155,230 @@ header .menu-toggle {
 }
 
 .about {
+  padding: 6rem 8%;
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+}
+.about .about-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 4rem 8%;
-  gap: 2rem;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .about .about-text {
   flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.about .about-text .section-subtitle {
+  font-size: 1.1rem;
+  color: #c8a97e;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 .about .about-text h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1.2;
+  background: linear-gradient(45deg, #2c2c2c, #4a4a4a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about .about-text .about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
   margin-bottom: 1rem;
+}
+.about .about-text .mision-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.about .about-text .mision-vision .mision, .about .about-text .mision-vision .vision {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.about .about-text .mision-vision .mision:hover, .about .about-text .mision-vision .vision:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.12);
+}
+.about .about-text .mision-vision .mision .icon, .about .about-text .mision-vision .vision .icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  color: #c8a97e;
+}
+.about .about-text .mision-vision .mision .icon i, .about .about-text .mision-vision .vision .icon i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: rgba(200, 169, 126, 0.1);
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.about .about-text .mision-vision .mision .icon:hover i, .about .about-text .mision-vision .vision .icon:hover i {
+  transform: rotateY(180deg);
+  background: #c8a97e;
+  color: white;
+}
+.about .about-text .mision-vision .mision h3, .about .about-text .mision-vision .vision h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+.about .about-text .mision-vision .mision p, .about .about-text .mision-vision .vision p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+.about .about-text .mision-vision .mision::before, .about .about-text .mision-vision .vision::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #c8a97e;
+  border-radius: 4px 0 0 4px;
+}
+.about .about-text .about-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.about .about-text .about-features .feature {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.about .about-text .about-features .feature:hover {
+  transform: translateY(-3px);
+}
+.about .about-text .about-features .feature .feature-icon {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  color: #c8a97e;
+}
+.about .about-text .about-features .feature .feature-icon i {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: rgba(200, 169, 126, 0.1);
+  border-radius: 12px;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.about .about-text .about-features .feature .feature-icon:hover i {
+  background: #c8a97e;
+  color: white;
+  transform: translateY(-5px);
+}
+.about .about-text .about-features .feature h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #2c2c2c;
+}
+.about .about-text .about-features .feature p {
+  font-size: 0.9rem;
+  color: #666;
 }
 .about .about-img {
   flex: 1;
+  min-width: 300px;
+  position: relative;
 }
 .about .about-img img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+.about .about-img img:hover {
+  transform: scale(1.02);
+}
+.about .about-img .experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: #c8a97e;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.about .about-img .experience-badge .years {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.about .about-img .experience-badge .text {
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.2;
+}
+@media (max-width: 1024px) {
+  .about {
+    padding: 4rem 5%;
+  }
+  .about .about-text h2 {
+    font-size: 2.5rem;
+  }
+  .about .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 5%;
+  }
+  .about .mision-vision {
+    grid-template-columns: 1fr;
+  }
+  .about .about-features {
+    grid-template-columns: 1fr;
+  }
+  .about .about-text h2 {
+    font-size: 2rem;
+  }
+  .about .experience-badge {
+    width: 100px;
+    height: 100px;
+    bottom: -10px;
+    right: -10px;
+  }
+  .about .experience-badge .years {
+    font-size: 2rem;
+  }
+  .about .experience-badge .text {
+    font-size: 0.8rem;
+  }
 }
 
 .reservas {
@@ -202,12 +405,12 @@ header .menu-toggle {
 }
 .reservas form button {
   padding: 0.8rem 1.5rem;
-  background: #f8d49d;
+  background: #c8a97e;
   color: #000;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
   cursor: pointer;
   border: none;
 }
@@ -235,7 +438,7 @@ footer .socials {
   margin-top: 1rem;
 }
 footer .socials a {
-  color: #f8d49d;
+  color: #c8a97e;
   text-decoration: none;
   margin: 0 0.5rem;
 }

@@ -1,10 +1,24 @@
 //  Colores principales
-$color-primary: #f8d49d;
+$color-primary: #c8a97e;
 $color-primary-dark: #e1b96f;
 $color-dark: #111111;
 $color-bg: #fafafa;
 $color-text: #333;
+$color-text-dark: #2c2c2c;
+$color-text-gray: #666;
 
 // Tipografía
 $font-title: 'Playfair Display', serif;
 $font-body: 'Roboto', sans-serif;
+
+// Espaciado
+$spacing-base: 1rem;
+
+// Bordes y Sombras
+$border-radius-card: 16px;
+$border-radius-icon: 12px;
+$shadow-card: 0 4px 30px rgba(0,0,0,0.08);
+$shadow-hover: 0 6px 40px rgba(0,0,0,0.12);
+
+// Transiciones
+$transition-default: all 0.3s ease;

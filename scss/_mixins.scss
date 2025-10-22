@@ -12,10 +12,21 @@
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: $transition-default;
   cursor: pointer;
 
   &:hover {
     background: $color-primary-dark;
   }
+}
+
+@mixin icon-container($size, $radius: 50%) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  background: rgba($color-primary, 0.1);
+  border-radius: $radius;
+  display: inline-block;
+  text-align: center;
+  transition: $transition-default;
 }
