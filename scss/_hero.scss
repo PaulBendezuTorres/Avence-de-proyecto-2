@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .hero {
   height: 100vh;
   background: url("https://images.unsplash.com/photo-1543353071-873f17a7a088") no-repeat center/cover;
@@ -5,6 +8,7 @@
   text-align: center;
   color: white;
   position: relative;
+  animation: breathe 6s ease-in-out 1;
 
   &::after {
     content: "";
@@ -21,6 +25,16 @@
       font-family: $font-title;
       font-size: 3rem;
       margin-bottom: 1rem;
+
+      span {
+        @include letter-animation;
+      }
+
+      @for $i from 1 through 33 {
+        span:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.05}s;
+        }
+      }
     }
 
     p {

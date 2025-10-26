@@ -1,6 +1,9 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 header {
   background: rgba(169, 71, 5, 0.9);
-  padding: 1rem 5%;
+  padding: $spacing-base 5%;
   @include flex-center;
   justify-content: space-between;
   position: sticky;

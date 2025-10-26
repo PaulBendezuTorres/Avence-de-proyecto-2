@@ -1,0 +1,13 @@
+{
+  "name": "el-cordon-y-la-rosa",
+  "version": "1.0.0",
+  "description": "El Cordon y La Rosa Restaurant Website",
+  "scripts": {
+    "sass": "sass --watch scss/main.scss:css/main.css --style compressed",
+    "sass:build": "sass scss/main.scss:css/main.css --style compressed",
+    "start": "npm run sass"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

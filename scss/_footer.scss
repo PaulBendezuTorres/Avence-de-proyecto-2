@@ -1,20 +1,88 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 footer {
   background: $color-dark;
-  color: #aaa;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
+  padding: $spacing-xxl 0 $spacing-base;
+  color: $color-bg-light;
 
-  .socials {
-    margin-top: 1rem;
+  .footer-content {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $spacing-xl;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-xl;
+  }
+
+  .footer-section {
+    h3 {
+      font-family: $font-title;
+      font-size: $font-size-medium;
+      margin-bottom: $spacing-large;
+      color: $color-primary;
+    }
+
+    p {
+      margin-bottom: $spacing-base;
+      display: flex;
+      align-items: center;
+      gap: $spacing-base;
+      font-size: $font-size-small;
+
+      i {
+        color: $color-primary;
+        width: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: $spacing-base;
 
     a {
+      background: rgba($color-primary, 0.1);
       color: $color-primary;
-      text-decoration: none;
-      margin: 0 0.5rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $transition-default;
 
       &:hover {
-        text-decoration: underline;
+        background: $color-primary;
+        color: $color-bg-light;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: $spacing-xl;
+    padding-top: $spacing-xl;
+    border-top: 1px solid rgba($color-bg-light, 0.1);
+    text-align: center;
+    font-size: $font-size-small;
+    opacity: 0.7;
+  }
+}
+
+// Responsive styles para el footer
+@media (max-width: $breakpoint-mobile) {
+  footer {
+    .footer-content {
+      text-align: center;
+
+      .footer-section p {
+        justify-content: center;
+      }
+
+      .social-links {
+        justify-content: center;
       }
     }
   }

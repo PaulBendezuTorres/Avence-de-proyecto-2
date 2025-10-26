@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // Responsive Styles
 // Tablet (≤1024px)
 @media (max-width: $breakpoint-tablet) {

@@ -1,6 +1,9 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .reservas {
-  background: #f8f8f8;
-  padding: 4rem 8%;
+  background: $color-bg;
+  padding: $spacing-xxl 8%;
   text-align: center;
 
   h2 {

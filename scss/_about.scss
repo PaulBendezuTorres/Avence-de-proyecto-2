@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .about {
   padding: $section-padding;
   background: $color-bg-gradient;

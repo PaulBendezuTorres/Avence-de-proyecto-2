@@ -1,5 +1,8 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .menu-section {
-  padding: 4rem 8%;
+  padding: $spacing-xxl 8%;
   text-align: center;
 
   h2 {

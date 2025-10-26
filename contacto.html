@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Cordon y la Rosa - Restaurante</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="scss/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -16,7 +17,7 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="index.html#menu">Menú</a></li>
-        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="index.html#nosotros">Sobre Nosotros</a></li>
         <li><a href="reservas.html">Reservaciones</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -25,23 +26,155 @@
   </header>
 
   <main>
-    <!-- Contacto -->
-    <section id="contacto" class="contacto">
-      <h2>Contáctanos</h2>
-      <p>📍 Av. Principal 123, Lima, Perú</p>
-      <p>☎ (01) 456-7890</p>
-      <p>✉ contacto@laelegancia.com</p>
+    <!-- Sección de Sedes -->
+    <section class="sedes">
+      <div class="section-title">
+        <h2>Nuestros Locales en Ica</h2>
+        <div class="title-decoration"></div>
+      </div>
+
+      <!-- Sede 1 - Los Maestros -->
+      <div class="sede-banner" style="background-image: url('https://scontent.fpio4-1.fna.fbcdn.net/v/t39.30808-6/564585394_1147105707521776_6064658167605137475_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE9cWKeHNle4hLYegLg8t-8Knmj-eMMEb0qeaP54wwRvZJixnnxOujRiaqEa72n5BTQvh2mA_JcXSCYkh66dXQq&_nc_ohc=7dBH46xquxoQ7kNvwE7zWTh&_nc_oc=AdmhuBa9MR2btGNW9-0Lj7LvQXZg6rkDxKM6K9CORqmUmK6cNYLrEo11HTevunosaUiPTdPBtdq60d6Bg1s7_5Sc&_nc_zt=23&_nc_ht=scontent.fpio4-1.fna&_nc_gid=UG1rpQJIMf719XZg4PTmzg&oh=00_AffbvhROZMleFDC3w_cxqSjKv1AaoUfuxFydL-ddxg951A&oe=69038EB9')">
+        <div class="sede-titulo">
+          <h3>El Cordón Y La Rosa</h3>
+        </div>
+        <div class="sede-info">
+          <div class="sede-detalles">
+            <div class="sede-botones">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=-14.0704925,-75.7385797" class="btn-sede" target="_blank">
+                <i class="fas fa-directions"></i>
+                Cómo Llegar
+              </a>
+              <a href="https://www.google.com/maps/place/El+Cord%C3%B3n+Y+La+Rosa/@-14.0704873,-75.7411546,17z/data=!3m1!4b1!4m6!3m5!1s0x9110e2eb18720009:0xbd7ee91c76134464!8m2!3d-14.0704925!4d-75.7385797!16s%2Fg%2F11bztvtvy6?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" class="btn-sede btn-mapa" target="_blank">
+                <i class="fas fa-map"></i>
+                Ver Mapa
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sede 2 - La Angostura -->
+      <div class="sede-banner" style="background-image: url('https://scontent.fpio4-1.fna.fbcdn.net/v/t39.30808-6/565894275_1148699504029063_6670464867502942437_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG_ZkRdr-3wF850NTx2XTNnVgbqYrci75VWBupityLvlUh9qMLhzXyCMijm3WseQ5M14lbWT3QX6h7umcBpBPJr&_nc_ohc=jGXwakJqpDcQ7kNvwEGI8hS&_nc_oc=AdkM3SYWf3p0NphEcBx1Ck3tpeMK8vuB7iJkoUukkJRzbkAs4PAAUb88MWMWoj5k-G1C_lsnEQ5tThSLObJ4ohn8&_nc_zt=23&_nc_ht=scontent.fpio4-1.fna&_nc_gid=Btm8P9s5RSJKJsg-BvsJsQ&oh=00_AfdsCInmN-W0IsAbekOC8uIijpvr4eN4QtwctQBSIYm_Dg&oe=6903953D')">
+        <div class="sede-titulo">
+          <h3>Sede El Cordon y La Rosa - Residencial La Angostura</h3>
+        </div>
+        <div class="sede-info">
+          <div class="sede-detalles">
+            <div class="sede-botones">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=-14.0468176,-75.7495479" class="btn-sede" target="_blank">
+                <i class="fas fa-directions"></i>
+                Cómo Llegar
+              </a>
+              <a href="https://www.google.com/maps/place/Restaurante+El+Cordon+y+La+Rosa+-+Residencial+La+Angostura/@-14.0468124,-75.7521228,17z/data=!3m1!4b1!4m6!3m5!1s0x9110e331d49f6aeb:0xf71f4da296e3c345!8m2!3d-14.0468176!4d-75.7495479!16s%2Fg%2F11txrq9_2h?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" class="btn-sede btn-mapa" target="_blank">
+                <i class="fas fa-map"></i>
+                Ver Mapa
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sede 3 - Villacuri -->
+      <div class="sede-banner" style="background-image: url('https://scontent.fpio4-1.fna.fbcdn.net/v/t39.30808-6/527543361_1082864227279258_5008334989828162068_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHVj5-nijEEEJJ5jV-ZaFhvuto-Bfmw1Sy62j4F-bDVLMo1G4h_EayhW4qYaXQLqtzpq7OCnn8A-6NXyEabKqpA&_nc_ohc=S7hDNo1sduYQ7kNvwGCACai&_nc_oc=AdlkIQze4Q08Lp7znomK1yEHbtV9L0X4b6E1Zftd2DWMCblKfSReLh8X2mX7_jjgmhIRhd5etVavj-QdA27oljgD&_nc_zt=23&_nc_ht=scontent.fpio4-1.fna&_nc_gid=jZz5K4c-Fit-r9U1VI20GA&oh=00_AffUt7bhrhsbrWZIwImkpaEyIoAFbolxHYjUOPz6EWoaXA&oe=6903A4D6')">
+        <div class="sede-titulo">
+          <h3>Sede El Cordón Y La Rosa Restaurant Villacuri</h3>
+        </div>
+        <div class="sede-info">
+          <div class="sede-detalles">
+            <div class="sede-botones">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=-13.9660296,-75.7804682" class="btn-sede" target="_blank">
+                <i class="fas fa-directions"></i>
+                Cómo Llegar
+              </a>
+              <a href="https://www.google.com/maps/place/El+Cord%C3%B3n+Y+La+Rosa+Restaurant+Villacuri/@-13.9663058,-75.7852922,17.23z/data=!4m6!3m5!1s0x9110fdda73c178d1:0xa69cf6d47a4838f3!8m2!3d-13.9660296!4d-75.7804682!16s%2Fg%2F11flbr7b6p?entry=ttu&g_ep=EgoyMDI1MTAyMi4wIKXMDSoASAFQAw%3D%3D" class="btn-sede btn-mapa" target="_blank">
+                <i class="fas fa-map"></i>
+                Ver Mapa
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner de Delivery -->
+    <section class="delivery-cta">
+      <div class="delivery-content">
+        <div class="delivery-header">
+          <i class="fas fa-concierge-bell"></i>
+          <h2>Servicio a Domicilio</h2>
+        </div>
+        <div class="delivery-description">
+          <p class="delivery-main-text">Ven a disfrutar de nuestras deliciosas opciones en pescados y mariscos, preparados con el toque casero de El Cordón y la Rosa.</p>
+          
+          <div class="delivery-info">
+            <div class="delivery-horario">
+              <div class="info-header">
+                <i class="far fa-clock"></i>
+                <h3>Horario de Atención</h3>
+              </div>
+              <p><i class="fas fa-sun"></i> Lunes a sábado de 8 a.m. a 11 p.m.</p>
+              <p><i class="fas fa-cloud-sun"></i> Domingo hasta las 6 p.m.</p>
+            </div>
+            
+            <div class="delivery-zonas">
+              <div class="info-header">
+                <i class="fas fa-motorcycle"></i>
+                <h3>Delivery disponible</h3>
+              </div>
+              <ul class="delivery-contacts">
+                <li>
+                  <i class="fas fa-map-marker-alt"></i>
+                  Los Maestros - <a href="tel:923851470"><i class="fas fa-phone"></i> 923 851 470</a>
+                </li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i>
+                  Guadalupe - <a href="tel:923851509"><i class="fas fa-phone"></i> 923 851 509</a>
+                </li>
+                <li>
+                  <i class="fas fa-map-marker-alt"></i>
+                  La Angostura - <a href="tel:919295046"><i class="fas fa-phone"></i> 919 295 046</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-
-  <!-- Footer -->
+ <!-- Footer -->
   <footer>
-    <p>© 2025 La Elegancia - Todos los derechos reservados</p>
-    <div class="socials">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">TripAdvisor</a>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Horario de Atención</h3>
+        <p><i class="far fa-clock"></i> Lunes a Sábado: 8:00 AM - 11:00 PM</p>
+        <p><i class="far fa-clock"></i> Domingos: 8:00 AM - 6:00 PM</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contáctanos</h3>
+        <p><i class="fas fa-phone"></i> Central: 056-218012</p>
+        <p><i class="fab fa-whatsapp"></i> WhatsApp: 919 295 046</p>
+        <p><i class="far fa-envelope"></i> info@elcordonylarosa.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tiktok.com/" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 El Cordón y la Rosa. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
