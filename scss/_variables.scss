@@ -3,6 +3,8 @@ $color-primary: #c8a97e;
 $color-primary-dark: #e1b96f;
 $color-dark: #111111;
 $color-bg: #fafafa;
+$color-bg-gradient: linear-gradient(to bottom, #fff, $color-bg);
+$color-bg-light: rgba(255, 255, 255, 0.8);
 $color-text: #333;
 $color-text-dark: #2c2c2c;
 $color-text-gray: #666;
@@ -11,14 +13,32 @@ $color-text-gray: #666;
 $font-title: 'Playfair Display', serif;
 $font-body: 'Roboto', sans-serif;
 
+// Font Sizes
+$font-size-small: 0.9rem;
+$font-size-base: 1rem;
+$font-size-medium: 1.1rem;
+$font-size-large: 1.6rem;
+$font-size-xl: 2.5rem;
+$font-size-xxl: 3rem;
+
 // Espaciado
 $spacing-base: 1rem;
+$spacing-large: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 4rem;
+$section-padding: 6rem 8%;
+$container-max-width: 1400px;
 
 // Bordes y Sombras
 $border-radius-card: 16px;
 $border-radius-icon: 12px;
 $shadow-card: 0 4px 30px rgba(0,0,0,0.08);
 $shadow-hover: 0 6px 40px rgba(0,0,0,0.12);
+$shadow-badge: 0 4px 20px rgba(0,0,0,0.2);
 
 // Transiciones
 $transition-default: all 0.3s ease;
+
+// Breakpoints
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
