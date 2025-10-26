@@ -156,7 +156,7 @@ header .menu-toggle {
 
 .about {
   padding: 6rem 8%;
-  background: linear-gradient(to bottom, #fff, #f9f9f9);
+  background: linear-gradient(to bottom, #fff, #fafafa);
 }
 .about .about-container {
   display: flex;
@@ -202,7 +202,7 @@ header .menu-toggle {
   gap: 2rem;
 }
 .about .about-text .mision-vision .mision, .about .about-text .mision-vision .vision {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
@@ -214,37 +214,43 @@ header .menu-toggle {
   transform: translateY(-5px);
   box-shadow: 0 6px 40px rgba(0, 0, 0, 0.12);
 }
-.about .about-text .mision-vision .mision .icon, .about .about-text .mision-vision .vision .icon {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  display: block;
-  color: #c8a97e;
+.about .about-text .mision-vision .mision .title-with-icon, .about .about-text .mision-vision .vision .title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-.about .about-text .mision-vision .mision .icon i, .about .about-text .mision-vision .vision .icon i {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+.about .about-text .mision-vision .mision .title-with-icon h3, .about .about-text .mision-vision .vision .title-with-icon h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  color: #2c2c2c;
+  margin: 0;
+}
+.about .about-text .mision-vision .mision .title-with-icon .icon, .about .about-text .mision-vision .vision .title-with-icon .icon {
+  font-size: 2.5rem;
+  color: #c8a97e;
+  margin-top: 2px;
+}
+.about .about-text .mision-vision .mision .title-with-icon .icon i, .about .about-text .mision-vision .vision .title-with-icon .icon i {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
   background: rgba(200, 169, 126, 0.1);
   border-radius: 50%;
   display: inline-block;
   text-align: center;
   transition: all 0.3s ease;
+  font-size: 1.4rem;
 }
-.about .about-text .mision-vision .mision .icon:hover i, .about .about-text .mision-vision .vision .icon:hover i {
+.about .about-text .mision-vision .mision .title-with-icon .icon:hover i, .about .about-text .mision-vision .vision .title-with-icon .icon:hover i {
   transform: rotateY(180deg);
   background: #c8a97e;
   color: white;
 }
-.about .about-text .mision-vision .mision h3, .about .about-text .mision-vision .vision h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: #2c2c2c;
-}
 .about .about-text .mision-vision .mision p, .about .about-text .mision-vision .vision p {
   color: #666;
   line-height: 1.7;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 .about .about-text .mision-vision .mision::before, .about .about-text .mision-vision .vision::before {
   content: "";
@@ -273,7 +279,7 @@ header .menu-toggle {
   transform: translateY(-3px);
 }
 .about .about-text .about-features .feature .feature-icon {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   display: block;
   color: #c8a97e;
@@ -310,7 +316,7 @@ header .menu-toggle {
 }
 .about .about-img img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
@@ -319,8 +325,8 @@ header .menu-toggle {
 }
 .about .about-img .experience-badge {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
+  bottom: -1.5rem;
+  right: -1.5rem;
   background: #c8a97e;
   color: white;
   padding: 1.5rem;
@@ -342,43 +348,6 @@ header .menu-toggle {
   font-size: 0.9rem;
   text-align: center;
   line-height: 1.2;
-}
-@media (max-width: 1024px) {
-  .about {
-    padding: 4rem 5%;
-  }
-  .about .about-text h2 {
-    font-size: 2.5rem;
-  }
-  .about .about-features {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .about {
-    padding: 3rem 5%;
-  }
-  .about .mision-vision {
-    grid-template-columns: 1fr;
-  }
-  .about .about-features {
-    grid-template-columns: 1fr;
-  }
-  .about .about-text h2 {
-    font-size: 2rem;
-  }
-  .about .experience-badge {
-    width: 100px;
-    height: 100px;
-    bottom: -10px;
-    right: -10px;
-  }
-  .about .experience-badge .years {
-    font-size: 2rem;
-  }
-  .about .experience-badge .text {
-    font-size: 0.8rem;
-  }
 }
 
 .reservas {
@@ -444,4 +413,42 @@ footer .socials a {
 }
 footer .socials a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 4rem 2rem;
+  }
+  .about .about-text h2 {
+    font-size: 2.5rem;
+  }
+  .about .about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 1.5rem;
+  }
+  .about .about-text h2 {
+    font-size: 1.6rem;
+  }
+  .about .mision-vision {
+    grid-template-columns: 1fr;
+  }
+  .about .about-features {
+    grid-template-columns: 1fr;
+  }
+  .about .experience-badge {
+    width: 100px;
+    height: 100px;
+    bottom: -10px;
+    right: -10px;
+  }
+  .about .experience-badge .years {
+    font-size: 1.6rem;
+  }
+  .about .experience-badge .text {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=main.css.map */
