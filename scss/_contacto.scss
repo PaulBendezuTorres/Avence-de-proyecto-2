@@ -59,10 +59,26 @@
     }
 
     .delivery-info {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: $spacing-xl;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 calc(-#{$spacing-xl} / 2);
       text-align: left;
+
+      > * {
+        flex: 1 1 300px;
+        margin: 0 calc(#{$spacing-xl} / 2);
+      }
+
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $spacing-xl;
+        margin: 0;
+
+        > * {
+          margin: 0;
+        }
+      }
       
       .info-header {
         display: flex;
@@ -260,14 +276,23 @@
           justify-content: center;
           gap: $spacing-large;
           padding: $spacing-base $spacing-large;
-          background: rgba(255, 255, 255, 0.15);
+          background: rgba(255, 255, 255, 0.75);  // Fallback
           border-radius: $border-radius-card;
-          backdrop-filter: blur(8px);
           margin: 0 auto;
           position: relative;
           left: 50%;
           transform: translateX(-50%);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+          @supports (backdrop-filter: blur(8px)) {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+          }
+
+          @supports (-webkit-backdrop-filter: blur(8px)) {
+            background: rgba(255, 255, 255, 0.15);
+            -webkit-backdrop-filter: blur(8px);
+          }
         }
 
         .btn-sede {

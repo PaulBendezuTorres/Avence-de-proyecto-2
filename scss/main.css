@@ -443,7 +443,7 @@ header .menu-toggle {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 .about .about-img .experience-badge .years {
   font-size: 2.5rem;
@@ -543,10 +543,25 @@ header .menu-toggle {
   font-style: italic;
 }
 .delivery-cta .delivery-content .delivery-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-2rem / 2);
   text-align: left;
+}
+.delivery-cta .delivery-content .delivery-info > * {
+  flex: 1 1 300px;
+  margin: 0 calc(2rem / 2);
+}
+@supports (display: grid) {
+  .delivery-cta .delivery-content .delivery-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0;
+  }
+  .delivery-cta .delivery-content .delivery-info > * {
+    margin: 0;
+  }
 }
 .delivery-cta .delivery-content .delivery-info .info-header {
   display: flex;
@@ -716,15 +731,26 @@ header .menu-toggle {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 16px;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
   margin: 0 auto;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+@supports ((-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px))) {
+  .sedes .sede-banner .sede-info .sede-detalles .sede-botones {
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+  }
+}
+@supports (-webkit-backdrop-filter: blur(8px)) {
+  .sedes .sede-banner .sede-info .sede-detalles .sede-botones {
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(8px);
+  }
 }
 .sedes .sede-banner .sede-info .sede-detalles .btn-sede {
   flex: 0 1 auto;
