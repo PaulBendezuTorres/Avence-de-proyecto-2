@@ -1,55 +1,279 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-// Responsive Styles
+// ===================================
+// RESPONSIVE STYLES
+// ===================================
+
 // Tablet (≤1024px)
 @media (max-width: $breakpoint-tablet) {
+
+  // About Section
   .about {
     padding: $spacing-xxl $spacing-xl;
+
+    .about-container {
+      gap: $spacing-xl;
+    }
 
     .about-text {
       h2 {
         font-size: $font-size-xl;
       }
+
+      .mision-vision {
+        gap: $spacing-large;
+
+        .mision,
+        .vision {
+          padding: $spacing-large;
+
+          h3 {
+            font-size: $font-size-medium;
+          }
+
+          p {
+            font-size: $font-size-small;
+          }
+        }
+      }
     }
 
     .about-features {
       grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-base;
+    }
+  }
+
+  // Delivery Section
+  .delivery-cta {
+    .delivery-info {
+      flex-direction: column;
+      gap: $spacing-large;
     }
   }
 }
 
 // Mobile (≤768px)
 @media (max-width: $breakpoint-mobile) {
+
+  // About Section
   .about {
-    padding: $spacing-xl $spacing-large;
+    padding: $spacing-xl $spacing-base;
+
+    .about-container {
+      gap: $spacing-large;
+    }
 
     .about-text {
+      min-width: 100%;
+
       h2 {
         font-size: $font-size-large;
       }
-    }
 
-    .mision-vision {
-      grid-template-columns: 1fr;
+      .section-subtitle {
+        font-size: $font-size-small;
+      }
+
+      .about-description {
+        font-size: $font-size-small;
+      }
+
+      .mision-vision {
+        grid-template-columns: 1fr;
+        gap: $spacing-base;
+
+        .mision,
+        .vision {
+          padding: $spacing-base;
+
+          .title-with-icon {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: $spacing-base * 0.5;
+
+            h3 {
+              font-size: 1.2rem;
+            }
+
+            .icon i {
+              width: 45px;
+              height: 45px;
+              font-size: 1.2rem;
+            }
+          }
+
+          p {
+            font-size: 0.9rem;
+            text-align: center;
+          }
+        }
+      }
     }
 
     .about-features {
       grid-template-columns: 1fr;
+      gap: $spacing-base;
+
+      .feature {
+        padding: $spacing-base;
+
+        .feature-icon i {
+          width: 50px;
+          height: 50px;
+        }
+
+        h4 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+        }
+      }
     }
 
-    .experience-badge {
-      width: 100px;
-      height: 100px;
-      bottom: -10px;
-      right: -10px;
+    .about-img {
+      min-width: 100%;
 
-      .years {
-        font-size: $font-size-large;
+      .experience-badge {
+        width: 80px;
+        height: 80px;
+        bottom: 5px;
+        right: 5px;
+        padding: $spacing-base * 0.5;
+
+        .years {
+          font-size: 1.3rem;
+        }
+
+        .text {
+          font-size: 0.65rem;
+        }
+      }
+    }
+  }
+
+  // Delivery Section
+  .delivery-cta {
+    padding: $spacing-xl $spacing-base !important;
+
+    .delivery-content {
+      padding: $spacing-large;
+    }
+
+    .delivery-header {
+      h2 {
+        font-size: 1.5rem;
       }
 
-      .text {
-        font-size: $font-size-small;
+      i {
+        font-size: 2rem;
+      }
+    }
+
+    .delivery-description {
+      .delivery-main-text {
+        font-size: 0.95rem;
+      }
+    }
+
+    .delivery-info {
+      flex-direction: column;
+      gap: $spacing-large;
+
+      .delivery-horario,
+      .delivery-zonas {
+        width: 100%;
+        padding: $spacing-base;
+
+        .info-header {
+          h3 {
+            font-size: 1.1rem;
+          }
+
+          i {
+            font-size: 1.3rem;
+          }
+        }
+
+        p,
+        li {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+// Small Mobile (≤480px)
+@media (max-width: 480px) {
+
+  // About Section
+  .about {
+    .about-text {
+      .mision-vision {
+
+        .mision,
+        .vision {
+          .title-with-icon {
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            .icon i {
+              width: 40px;
+              height: 40px;
+              font-size: 1rem;
+            }
+          }
+
+          p {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Delivery Section
+  .delivery-cta {
+    .delivery-header {
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+
+    .delivery-info {
+
+      .delivery-horario,
+      .delivery-zonas {
+        .info-header {
+          h3 {
+            font-size: 1rem;
+          }
+        }
+
+        p,
+        li {
+          font-size: 0.85rem;
+        }
+      }
+
+      .delivery-contacts li {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+
+        i.fa-map-marker-alt {
+          margin-right: 0;
+        }
       }
     }
   }

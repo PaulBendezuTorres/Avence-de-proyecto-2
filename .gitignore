@@ -10,6 +10,7 @@ dist/
 build/
 *.css.map
 *.js.map
+css/main-dev.css
 
 # Archivos del sistema operativo
 .DS_Store
@@ -43,3 +44,6 @@ logs/
 # Archivos de prueba
 coverage/
 .nyc_output/
+
+# Documentación de desarrollo
+MEJORAS-RESPONSIVIDAD.md
