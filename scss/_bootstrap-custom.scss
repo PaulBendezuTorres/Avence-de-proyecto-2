@@ -1,0 +1,23 @@
+// Personalización de variables de Bootstrap
+// Sobrescribir variables ANTES de importar Bootstrap
+
+// Importar variables del proyecto
+@use 'variables' as *;
+
+// Personalizar variables de Bootstrap para que coincidan con el diseño actual
+$primary: $color-primary !default;
+$dark: $color-dark !default;
+$body-bg: $color-bg !default;
+$body-color: $color-text !default;
+$font-family-base: $font-body !default;
+$headings-font-family: $font-title !default;
+
+// Bordes y sombras
+$border-radius: 8px !default;
+$border-radius-lg: $border-radius-card !default;
+
+// Espaciado
+$spacer: $spacing-base !default;
+
+// Importar Bootstrap completo (la forma más simple y segura)
+@import "../node_modules/bootstrap/scss/bootstrap";

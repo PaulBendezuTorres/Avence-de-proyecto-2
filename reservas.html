@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Cordon y la Rosa - Restaurante</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <title>Reservaciones - El Cordón y la Rosa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
   <!-- Header -->
@@ -28,18 +31,279 @@
   <main>
     <!-- Reservaciones -->
     <section id="reservas" class="reservas">
-      <h2>Haz tu Reserva</h2>
-      <form id="formReserva">
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="number" placeholder="Número de personas" required>
-        <input type="date" required>
-        <button type="submit" class="btn">Reservar</button>
-      </form>
+      <div class="container">
+        <div class="reservas-header">
+          <h2>Reserva tu Mesa</h2>
+          <p class="subtitle">Completa el formulario y asegura tu experiencia gastronómica</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress" style="height: 8px;">
+            <div class="progress-bar" role="progressbar" id="progressBar" style="width: 33.33%" aria-valuenow="33"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="step-indicators">
+            <div class="step-indicator active" data-step="1">
+              <div class="step-number">1</div>
+              <div class="step-label">Información Personal</div>
+            </div>
+            <div class="step-indicator" data-step="2">
+              <div class="step-number">2</div>
+              <div class="step-label">Detalles de Reserva</div>
+            </div>
+            <div class="step-indicator" data-step="3">
+              <div class="step-number">3</div>
+              <div class="step-label">Preferencias</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulario Multi-paso -->
+        <form id="formReserva" class="reservation-form" novalidate>
+
+          <!-- Paso 1: Información Personal -->
+          <div class="form-step active" data-step="1">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title mb-4">
+                  <i class="fas fa-user-circle"></i> Información Personal
+                </h3>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre Completo *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                      <input type="text" class="form-control" id="nombre" name="nombre" required>
+                      <div class="invalid-feedback">
+                        Por favor ingresa tu nombre completo.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Correo Electrónico *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                      <div class="invalid-feedback">
+                        Por favor ingresa un correo válido.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label">Teléfono *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                      <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{9}" required>
+                      <div class="invalid-feedback">
+                        Por favor ingresa un teléfono válido (9 dígitos).
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 2: Detalles de Reserva -->
+          <div class="form-step" data-step="2">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title mb-4">
+                  <i class="fas fa-calendar-alt"></i> Detalles de tu Reserva
+                </h3>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="sede" class="form-label">Sede *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                      <select class="form-select" id="sede" name="sede" required>
+                        <option value="" selected disabled>Selecciona una sede</option>
+                        <option value="los-maestros">Los Maestros</option>
+                        <option value="la-angostura">La Angostura</option>
+                        <option value="villacuri">Villacuri</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor selecciona una sede.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="personas" class="form-label">Número de Personas *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-users"></i></span>
+                      <select class="form-select" id="personas" name="personas" required>
+                        <option value="" selected disabled>Selecciona cantidad</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas</option>
+                        <option value="6">6 personas</option>
+                        <option value="7">7 personas</option>
+                        <option value="8">8 personas</option>
+                        <option value="mas">Más de 8 personas</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor selecciona el número de personas.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="fecha" class="form-label">Fecha *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                      <input type="date" class="form-control" id="fecha" name="fecha" required>
+                      <div class="invalid-feedback">
+                        Por favor selecciona una fecha.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="hora" class="form-label">Hora *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                      <select class="form-select" id="hora" name="hora" required>
+                        <option value="" selected disabled>Selecciona una hora</option>
+                        <optgroup label="Almuerzo">
+                          <option value="12:00">12:00 PM</option>
+                          <option value="12:30">12:30 PM</option>
+                          <option value="13:00">1:00 PM</option>
+                          <option value="13:30">1:30 PM</option>
+                          <option value="14:00">2:00 PM</option>
+                          <option value="14:30">2:30 PM</option>
+                          <option value="15:00">3:00 PM</option>
+                        </optgroup>
+                        <optgroup label="Cena">
+                          <option value="18:00">6:00 PM</option>
+                          <option value="18:30">6:30 PM</option>
+                          <option value="19:00">7:00 PM</option>
+                          <option value="19:30">7:30 PM</option>
+                          <option value="20:00">8:00 PM</option>
+                          <option value="20:30">8:30 PM</option>
+                          <option value="21:00">9:00 PM</option>
+                          <option value="21:30">9:30 PM</option>
+                        </optgroup>
+                      </select>
+                      <div class="invalid-feedback">
+                        Por favor selecciona una hora.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 3: Preferencias -->
+          <div class="form-step" data-step="3">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title mb-4">
+                  <i class="fas fa-star"></i> Preferencias Especiales
+                </h3>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="ocasion" class="form-label">Ocasión Especial</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-gift"></i></span>
+                      <select class="form-select" id="ocasion" name="ocasion">
+                        <option value="" selected>Ninguna</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="aniversario">Aniversario</option>
+                        <option value="cita-romantica">Cita Romántica</option>
+                        <option value="reunion-negocios">Reunión de Negocios</option>
+                        <option value="celebracion-familiar">Celebración Familiar</option>
+                        <option value="otro">Otro</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="ubicacion" class="form-label">Preferencia de Ubicación</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-chair"></i></span>
+                      <select class="form-select" id="ubicacion" name="ubicacion">
+                        <option value="" selected>Sin preferencia</option>
+                        <option value="ventana">Junto a la ventana</option>
+                        <option value="terraza">Terraza</option>
+                        <option value="interior">Interior</option>
+                        <option value="privado">Área privada</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="restricciones" class="form-label">Restricciones Alimentarias o Comentarios</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="fas fa-utensils"></i></span>
+                      <textarea class="form-control" id="restricciones" name="restricciones" rows="3"
+                        placeholder="Ej: Alergia a mariscos, vegetariano, etc."></textarea>
+                    </div>
+                    <div class="form-text">
+                      <i class="fas fa-info-circle"></i> Ayúdanos a preparar la mejor experiencia para ti
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botones de Navegación -->
+          <div class="form-navigation">
+            <button type="button" class="btn btn-secondary" id="prevBtn" style="display: none;">
+              <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            <button type="button" class="btn btn-primary" id="nextBtn">
+              Siguiente <i class="fas fa-arrow-right"></i>
+            </button>
+            <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">
+              <i class="fas fa-check-circle"></i> Confirmar Reserva
+            </button>
+          </div>
+        </form>
+
+        <!-- Modal de Confirmación -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-center py-5">
+                <div class="success-animation mb-4">
+                  <i class="fas fa-check-circle fa-5x text-success"></i>
+                </div>
+                <h3 class="mb-3">¡Reserva Exitosa!</h3>
+                <p class="lead mb-2">Tu reserva ha sido confirmada correctamente</p>
+                <p class="text-muted">Te enviaremos un correo de confirmación a:</p>
+                <p class="fw-bold text-primary" id="confirmEmail"></p>
+                <div class="mt-4">
+                  <p class="small text-muted mb-0">
+                    <i class="fas fa-info-circle"></i> ¡Esperamos verte pronto en El Cordón y la Rosa!
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer border-0 justify-content-center">
+                <button type="button" class="btn btn-primary px-4" data-bs-dismiss="modal">Entendido</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
- <!-- Footer -->
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
@@ -73,6 +337,10 @@
     </div>
   </footer>
 
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="reservas.js"></script>
 </body>
+
 </html>

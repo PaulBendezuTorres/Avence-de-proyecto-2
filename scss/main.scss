@@ -1,6 +1,10 @@
 // Importar todos los módulos al principio
 @use 'variables' as *;
 @use 'mixins' as *;
+
+// Importar Bootstrap personalizado
+@use 'bootstrap-custom';
+
 @use 'header';
 @use 'hero';
 @use 'menu';

@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "El Cordon y La Rosa Restaurant Website",
   "scripts": {
-    "sass": "sass --watch scss/main.scss:css/main.css --style compressed",
-    "sass:build": "sass scss/main.scss:css/main.css --style compressed",
+    "sass": "sass --watch scss/main.scss:css/main.css --style compressed --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
+    "sass:build": "sass scss/main.scss:css/main.css --style compressed --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
+    "sass:dev": "sass scss/main.scss:css/main-dev.css --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
     "start": "npm run sass"
   },
   "devDependencies": {
     "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
   }
 }
