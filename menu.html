@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>El Cordon y la Rosa - Menú</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="logo">El Cordón y la Rosa</div>
-    <nav class="nav-links">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="menu.html">Menú</a></li>
-        <li><a href="index.html#nosotros">Sobre Nosotros</a></li>
-        <li><a href="reservas.html">Reservaciones</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="menu-toggle" id="menuToggle">&#9776;</div>
-  </header>
+  <!-- Header Component Container -->
+  <div id="header-container"></div>
 
   <main>
     <!-- Menú -->
@@ -36,53 +27,28 @@
           <p>Cremoso risotto con langostinos y un toque de limón.</p>
         </div>
         <div class="menu-card">
-          <img src="https://elcomercio.pe/resizer/fJp2AYm_xVWFZfqOaLQU6d6yzSY=/980x528/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/U2GR4YJ72RFEVPUBVDTVPRERHE.jpg" alt="Carne elegante">
+          <img
+            src="https://elcomercio.pe/resizer/fJp2AYm_xVWFZfqOaLQU6d6yzSY=/980x528/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/U2GR4YJ72RFEVPUBVDTVPRERHE.jpg"
+            alt="Carne elegante">
           <h3>Filete en Salsa de Vino</h3>
           <p>Corte premium acompañado de vegetales salteados.</p>
         </div>
         <div class="menu-card">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.e3yJmSbURQeVv39GMKDd5wHaF0?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Postre gourmet">
+          <img src="https://tse3.mm.bing.net/th/id/OIP.e3yJmSbURQeVv39GMKDd5wHaF0?rs=1&pid=ImgDetMain&o=7&rm=3"
+            alt="Postre gourmet">
           <h3>Tarta de Chocolate</h3>
           <p>Delicada mezcla de cacao y frutos rojos frescos.</p>
         </div>
       </div>
     </section>
   </main>
- 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Horario de Atención</h3>
-        <p><i class="far fa-clock"></i> Lunes a Sábado: 8:00 AM - 11:00 PM</p>
-        <p><i class="far fa-clock"></i> Domingos: 8:00 AM - 6:00 PM</p>
-      </div>
-      <div class="footer-section">
-        <h3>Contáctanos</h3>
-        <p><i class="fas fa-phone"></i> Central: 056-218012</p>
-        <p><i class="fab fa-whatsapp"></i> WhatsApp: 919 295 046</p>
-        <p><i class="far fa-envelope"></i> info@elcordonylarosa.com</p>
-      </div>
-      <div class="footer-section">
-        <h3>Síguenos</h3>
-        <div class="social-links">
-          <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://tiktok.com/" target="_blank" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 El Cordón y la Rosa. Todos los derechos reservados.</p>
-    </div>
-  </footer>
 
+  <!-- Footer Component Container -->
+  <div id="footer-container"></div>
+
+  <!-- Components System -->
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

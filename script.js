@@ -1,11 +1,2 @@
-// Menú hamburguesa
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.querySelector("header ul");
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  }
-});
+// Script principal - Ya no maneja el menú porque lo hace components.js
+// Este archivo se puede usar para otras funcionalidades específicas de página

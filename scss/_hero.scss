@@ -14,12 +14,13 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .hero-text {
     position: relative;
     z-index: 1;
+    padding: 0 1rem;
 
     h1 {
       font-family: $font-title;
@@ -44,6 +45,40 @@
 
     .btn {
       @include button-style;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: $breakpoint-mobile) {
+  .hero {
+    .hero-text {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    .hero-text {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+      }
     }
   }
 }
