@@ -30,26 +30,41 @@
 
   <main>
     <!-- Menú -->
-    <section id="menu" class="menu-section">
-      <h2>Nuestro Menú</h2>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Plato gourmet">
-          <h3>Risotto de Mariscos</h3>
-          <p>Cremoso risotto con langostinos y un toque de limón.</p>
-        </div>
-        <div class="menu-card">
-          <img
-            src="https://elcomercio.pe/resizer/fJp2AYm_xVWFZfqOaLQU6d6yzSY=/980x528/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/U2GR4YJ72RFEVPUBVDTVPRERHE.jpg"
-            alt="Carne elegante">
-          <h3>Filete en Salsa de Vino</h3>
-          <p>Corte premium acompañado de vegetales salteados.</p>
-        </div>
-        <div class="menu-card">
-          <img src="https://tse3.mm.bing.net/th/id/OIP.e3yJmSbURQeVv39GMKDd5wHaF0?rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt="Postre gourmet">
-          <h3>Tarta de Chocolate</h3>
-          <p>Delicada mezcla de cacao y frutos rojos frescos.</p>
+    <section id="menu" class="menu-section py-5">
+      <div class="container">
+        <h2 class="text-center display-5 fw-bold mb-5">Nuestro Menú</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm menu-card">
+              <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="card-img-top"
+                alt="Plato gourmet">
+              <div class="card-body text-center">
+                <h3 class="card-title h5 fw-bold">Risotto de Mariscos</h3>
+                <p class="card-text text-muted">Cremoso risotto con langostinos y un toque de limón.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm menu-card">
+              <img
+                src="https://elcomercio.pe/resizer/fJp2AYm_xVWFZfqOaLQU6d6yzSY=/980x528/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/U2GR4YJ72RFEVPUBVDTVPRERHE.jpg"
+                class="card-img-top" alt="Carne elegante">
+              <div class="card-body text-center">
+                <h3 class="card-title h5 fw-bold">Filete en Salsa de Vino</h3>
+                <p class="card-text text-muted">Corte premium acompañado de vegetales salteados.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm menu-card">
+              <img src="https://tse3.mm.bing.net/th/id/OIP.e3yJmSbURQeVv39GMKDd5wHaF0?rs=1&pid=ImgDetMain&o=7&rm=3"
+                class="card-img-top" alt="Postre gourmet">
+              <div class="card-body text-center">
+                <h3 class="card-title h5 fw-bold">Tarta de Chocolate</h3>
+                <p class="card-text text-muted">Delicada mezcla de cacao y frutos rojos frescos.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -58,34 +73,38 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>Horario de Atención</h3>
-        <p><i class="far fa-clock"></i> Lunes a Sábado: 8:00 AM - 11:00 PM</p>
-        <p><i class="far fa-clock"></i> Domingos: 8:00 AM - 6:00 PM</p>
-      </div>
-      <div class="footer-section">
-        <h3>Contáctanos</h3>
-        <p><i class="fas fa-phone"></i> Central: 056-218012</p>
-        <p><i class="fab fa-whatsapp"></i> WhatsApp: 919 295 046</p>
-        <p><i class="far fa-envelope"></i> info@elcordonylarosa.com</p>
-      </div>
-      <div class="footer-section">
-        <h3>Síguenos</h3>
-        <div class="social-links">
-          <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://tiktok.com/" target="_blank" aria-label="TikTok">
-            <i class="fab fa-tiktok"></i>
-          </a>
+      <div class="container">
+        <div class="row g-4 text-center text-md-start">
+          <div class="col-md-4 footer-section">
+            <h3 class="h5 fw-bold mb-3">Horario de Atención</h3>
+            <p class="mb-2"><i class="far fa-clock me-2"></i> Lunes a Sábado: 8:00 AM - 11:00 PM</p>
+            <p class="mb-0"><i class="far fa-clock me-2"></i> Domingos: 8:00 AM - 6:00 PM</p>
+          </div>
+          <div class="col-md-4 footer-section">
+            <h3 class="h5 fw-bold mb-3">Contáctanos</h3>
+            <p class="mb-2"><i class="fas fa-phone me-2"></i> Central: 056-218012</p>
+            <p class="mb-2"><i class="fab fa-whatsapp me-2"></i> WhatsApp: 919 295 046</p>
+            <p class="mb-0"><i class="far fa-envelope me-2"></i> info@elcordonylarosa.com</p>
+          </div>
+          <div class="col-md-4 footer-section">
+            <h3 class="h5 fw-bold mb-3">Síguenos</h3>
+            <div class="social-links d-flex justify-content-center justify-content-md-start gap-3">
+              <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://tiktok.com/" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 El Cordón y la Rosa. Todos los derechos reservados.</p>
+    <div class="footer-bottom text-center py-3">
+      <p class="mb-0">&copy; 2023 El Cordón y la Rosa. Todos los derechos reservados.</p>
     </div>
   </footer>
 

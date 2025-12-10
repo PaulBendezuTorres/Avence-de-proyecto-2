@@ -1,176 +1,41 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-// Banner de Delivery
+// Banner de Delivery - Solo estilos únicos
 .delivery-cta {
-  background: linear-gradient(135deg, rgba($color-primary, 0.95), rgba($color-primary-dark, 0.95)), 
-              url('../assets/img/pattern.png');
+  background: linear-gradient(135deg, rgba($color-primary, 0.95), rgba($color-primary-dark, 0.95)),
+    url('../assets/img/pattern.png');
   background-size: cover;
   color: $color-bg-light;
-  padding: $spacing-xxl 0;
-  
-  .delivery-content {
-    max-width: $container-max-width;
-    margin: 0 auto;
-    padding: 0 $spacing-xl;
 
-    .delivery-header {
-      text-align: center;
-      margin-bottom: $spacing-xl;
-
-      i {
-        font-size: $font-size-xl;
-        margin-bottom: $spacing-base;
-        color: $color-bg-light;
-      }
-
-      h2 {
-        font-family: $font-title;
-        font-size: $font-size-xl;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        display: inline-block;
-        margin: 0;
-        
-        &::after {
-          content: '';
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -10px;
-          width: 60px;
-          height: 2px;
-          background: $color-bg-light;
-        }
-      }
-    }
-
-    .delivery-description {
-      max-width: 800px;
-      margin: 0 auto;
-      
-      .delivery-main-text {
-        font-size: $font-size-large;
-        line-height: 1.6;
-        margin-bottom: $spacing-xxl;
-        font-style: italic;
-      }
-    }
-
-    .delivery-info {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 calc(-#{$spacing-xl} / 2);
-      text-align: left;
-
-      > * {
-        flex: 1 1 300px;
-        margin: 0 calc(#{$spacing-xl} / 2);
-      }
-
-      @supports (display: grid) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: $spacing-xl;
-        margin: 0;
-
-        > * {
-          margin: 0;
-        }
-      }
-      
-      .info-header {
-        display: flex;
-        align-items: center;
-        gap: $spacing-base;
-        margin-bottom: $spacing-large;
-
-        i {
-          font-size: $font-size-large;
-          color: $color-bg-light;
-        }
-
-        h3 {
-          font-family: $font-title;
-          font-size: $font-size-large;
-          margin: 0;
-          color: rgba($color-bg-light, 0.9);
-        }
-      }
-
-      p {
-        display: flex;
-        align-items: center;
-        gap: $spacing-base;
-        font-size: $font-size-medium;
-        margin-bottom: $spacing-base;
-        color: rgba($color-bg-light, 0.8);
-
-        i {
-          color: $color-bg-light;
-          font-size: $font-size-base;
-        }
-      }
-
-      .delivery-contacts {
-        list-style: none;
-        padding: 0;
-        
-        li {
-          display: flex;
-          align-items: center;
-          gap: $spacing-base;
-          margin-bottom: $spacing-base;
-          font-size: $font-size-medium;
-          color: rgba($color-bg-light, 0.8);
-
-          i {
-            color: $color-bg-light;
-            font-size: $font-size-base;
-          }
-
-          a {
-            display: flex;
-            align-items: center;
-            gap: $spacing-base;
-            color: $color-bg-light;
-            text-decoration: none;
-            transition: $transition-default;
-
-            i {
-              color: $color-bg-light;
-              opacity: 0.8;
-              font-size: $font-size-base;
-            }
-
-            &:hover {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
+  // Decoración del título (elemento único)
+  h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 2px;
+    background: $color-bg-light;
   }
 
-  .btn-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    gap: $spacing-base;
-    background: #25D366;
+  // Colores de iconos
+  i {
     color: $color-bg-light;
-    padding: $spacing-base $spacing-xl;
-    border-radius: $border-radius-card;
-    font-size: $font-size-medium;
-    text-decoration: none;
+  }
+
+  // Colores de texto
+  p {
+    color: rgba($color-bg-light, 0.9);
+  }
+
+  // Links con hover
+  a {
     transition: $transition-default;
 
     &:hover {
-      transform: translateY(-3px);
-    }
-
-    i {
-      font-size: $font-size-large;
+      opacity: 0.8;
     }
   }
 }
@@ -179,12 +44,12 @@
 .sedes {
   padding: $spacing-xxl 0;
   background: $color-bg;
-  
+
   .section-title {
     text-align: center;
     margin-bottom: $spacing-xxl;
     position: relative;
-    
+
     h2 {
       font-family: $font-title;
       font-size: $font-size-xxl;
@@ -243,7 +108,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.3) 100%);
     }
 
     .sede-titulo {
@@ -254,12 +119,12 @@
       padding: $spacing-xl;
       color: $color-bg-light;
       text-align: center;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0));
-      
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+
       h3 {
         font-family: $font-title;
         font-size: $font-size-xl;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin: 0;
       }
     }
@@ -269,14 +134,14 @@
       bottom: $spacing-xl;
       left: 0;
       right: 0;
-      
+
       .sede-detalles {
         .sede-botones {
           display: inline-flex;
           justify-content: center;
           gap: $spacing-large;
           padding: $spacing-base $spacing-large;
-          background: rgba(255, 255, 255, 0.75);  // Fallback
+          background: rgba(255, 255, 255, 0.75); // Fallback
           border-radius: $border-radius-card;
           margin: 0 auto;
           position: relative;
@@ -339,45 +204,11 @@
   }
 }
 
-// Responsive Styles
+// Responsive - Sedes
 @media (max-width: $breakpoint-mobile) {
-  .delivery-cta {
-    padding: $spacing-xl $spacing-base;
-
-    h1 {
-      font-size: $font-size-large;
-    }
-
-    h2 {
-      font-size: $font-size-large;
-    }
-
-    .delivery-description {
-      .delivery-main-text {
-        font-size: $font-size-medium;
-        margin-bottom: $spacing-xl;
-      }
-    }
-
-    .delivery-info {
-      grid-template-columns: 1fr;
-      gap: $spacing-large;
-      text-align: center;
-
-      h3 {
-        font-size: $font-size-medium;
-      }
-
-      .delivery-contacts {
-        display: inline-block;
-        text-align: left;
-      }
-    }
-  }
-
   .sedes {
-    h2 {
-      font-size: $font-size-large;
+    .section-title h2 {
+      font-size: $font-size-xl;
       padding: 0 $spacing-base;
     }
 
@@ -395,7 +226,7 @@
 
       .sede-info {
         bottom: $spacing-base;
-        
+
         .sede-detalles {
           .sede-botones {
             flex-direction: column;

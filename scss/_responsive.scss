@@ -161,47 +161,67 @@
     padding: $spacing-xl $spacing-base !important;
 
     .delivery-content {
-      padding: $spacing-large;
+      padding: $spacing-base;
     }
 
     .delivery-header {
+      margin-bottom: $spacing-large;
+
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
       }
 
       i {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
 
     .delivery-description {
       .delivery-main-text {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: $spacing-large;
+        text-align: center;
       }
     }
 
     .delivery-info {
       flex-direction: column;
       gap: $spacing-large;
+      text-align: center;
 
       .delivery-horario,
       .delivery-zonas {
         width: 100%;
-        padding: $spacing-base;
+        padding: $spacing-large;
+        background: rgba(white, 0.1);
+        border-radius: $border-radius-card;
 
         .info-header {
+          justify-content: center;
+          margin-bottom: $spacing-base;
+
           h3 {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: bold;
           }
 
           i {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
           }
         }
 
-        p,
+        p {
+          font-size: 0.9rem;
+          justify-content: center;
+          line-height: 1.6;
+        }
+
         li {
           font-size: 0.9rem;
+          line-height: 1.8;
+          justify-content: center;
         }
       }
     }
